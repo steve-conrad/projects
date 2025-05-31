@@ -11,7 +11,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Arch Nexus")
+        self.title("Nexus")
         self.geometry("400x250")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
@@ -167,34 +167,34 @@ class App(customtkinter.CTk):
         print("Windows")
 
     def button_run_all(self):
-        self.script_output("~/Dot-Files/Scripts/arch-nexus-py/scripts/run_all.sh")
+        self.script_output("~/projects/nexus/scripts/run_all.sh")
         print("Running system updates")
 
     def button_update(self):
         self.script_output(["pkexec", "pacman", "-Syu", "--noconfirm"])
 
     def button_install_yay(self):
-        self.script_output("~/Dot-Files/Scripts/arch-nexus-py/scripts/install_yay.sh")
+        self.script_output("~/projects/nexus/scripts/install_yay.sh")
         print("Installing yay")
 
     def button_install_hyprland(self):
-        self.script_output("~/Dot-Files/Scripts/arch-nexus-py/scripts/install_hyprland.sh")
+        self.script_output("~/projects/nexus/scripts/install_hyprland.sh")
         print("Installing Hyprland")
 
     def button_gpu_drivers(self):
-        self.script_output("~/Dot-Files/Scripts/arch-nexus-py/scripts/gpu_drivers.sh")
+        self.script_output("~/projects/nexus/scripts/install_gpu.sh")
         print("Installing GPU Drivers")
 
     def button_install_utils(self):
-        self.script_output("~/Dot-Files/Scripts/arch-nexus-py/scripts/install_utils.sh")
+        self.script_output("~/projects/nexus/scripts/install_utils.sh")
         print("Installing system utilities")
 
     def button_install_apps(self):
-        self.script_output("~/Dot-Files/Scripts/arch-nexus-py/scripts/install_apps.sh")
+        self.script_output("~/projects/nexus/scripts/install_apps.sh")
         print("Installing applications")
 
     def button_install_dots(self):
-        self.script_output("~/Dot-Files/Scripts/arch-nexus-py/scripts/install_dots.sh")
+        self.script_output("~/projects/nexus/scripts/install_dots.sh")
         print("Installing dot files")
 
 app = App()
