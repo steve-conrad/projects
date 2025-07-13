@@ -19,38 +19,38 @@ class PyprMenu(ctk.CTk):
         self.main_menu_frame.grid_columnconfigure(1, weight=1)
         self.main_menu_frame.grid_columnconfigure(2, weight=1)
         
-        self.button_1 = ctk.CTkButton(
-            self.main_menu_frame, 
-            text=" Shutdown",
+        self.shutdown = ctk.CTkButton(
+            self.main_menu_frame,
+            text="  Shutdown",
             command=self.button_shutdown,
             fg_color="#1f1f28",
             hover_color="#2d2d40",
             text_color="#bdf6ec",
             font=("JetBrainsMono", 28, "bold"),
         )
-        self.button_1.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
+        self.shutdown.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
 
-        self.button_2 = ctk.CTkButton(
+        self.restart = ctk.CTkButton(
             self.main_menu_frame,
-            text=" Restart",
+            text="  Restart",
             command=self.button_restart,
             fg_color="#1f1f28",
             hover_color="#2d2d40",
             text_color="#bdf6ec",
             font=("JetBrainsMono", 28, "bold"),
         )
-        self.button_2.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
+        self.restart.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
-        self.button_3 = ctk.CTkButton(
+        self.lock = ctk.CTkButton(
             self.main_menu_frame,
-            text=" Lock",
+            text="  Lock",
             command=self.button_lock,
             fg_color="#1f1f28",
             hover_color="#2d2d40",
             text_color="#bdf6ec",
             font=("JetBrainsMono", 28, "bold"),
         )
-        self.button_3.grid(row=1, column=2, padx=10, pady=10, sticky="nsew")
+        self.lock.grid(row=1, column=2, padx=10, pady=10, sticky="nsew")
 
 # Define button actions
     def button_shutdown(self):
@@ -60,7 +60,7 @@ class PyprMenu(ctk.CTk):
         print("Restart")
 
     def button_lock(self):
-        print("Lock")
+        subprocess.run(["hyprlock"])
 
 app = PyprMenu()
 app.mainloop()
