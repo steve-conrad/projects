@@ -21,36 +21,39 @@ class PyprMenu(ctk.CTk):
         
         self.shutdown = ctk.CTkButton(
             self.main_menu_frame,
-            text="  Shutdown",
+            text=" ",
             command=self.button_shutdown,
             fg_color="#1f1f28",
             hover_color="#2d2d40",
             text_color="#bdf6ec",
-            font=("JetBrainsMono Nerd Font", 28, "bold"),
+            font=("JetBrainsMono Nerd Font", 36, "bold"),
+            corner_radius=12,
         )
-        self.shutdown.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
+        self.shutdown.grid(row=1, column=0, padx=14, pady=14, sticky="nsew") 
 
         self.restart = ctk.CTkButton(
             self.main_menu_frame,
-            text="  Restart",
+            text=" ",
             command=self.button_restart,
             fg_color="#1f1f28",
             hover_color="#2d2d40",
             text_color="#bdf6ec",
-            font=("JetBrainsMono Nerd Font", 28, "bold"),
+            font=("JetBrainsMono Nerd Font", 36, "bold"),
+            corner_radius=12,
         )
-        self.restart.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
+        self.restart.grid(row=1, column=1, padx=14, pady=14, sticky="nsew")
 
         self.lock = ctk.CTkButton(
             self.main_menu_frame,
-            text="  Lock",
+            text=" ",
             command=self.button_lock,
             fg_color="#1f1f28",
             hover_color="#2d2d40",
             text_color="#bdf6ec",
-            font=("JetBrainsMono Nerd Font", 28, "bold"),
+            font=("JetBrainsMono Nerd Font", 36, "bold"),
+            corner_radius=12,
         )
-        self.lock.grid(row=1, column=2, padx=10, pady=10, sticky="nsew")
+        self.lock.grid(row=1, column=2, padx=14, pady=14, sticky="nsew")
 
 # Define button actions
     def button_shutdown(self):
