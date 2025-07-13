@@ -1,5 +1,5 @@
+#!/usr/bin/env python3
 #Pyprmenu - a simple menu system for hyprland written in python
-
 import subprocess
 import customtkinter as ctk
 
@@ -7,7 +7,7 @@ class PyprMenu(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.geometry = ("900x600")
+        self.title("Pyprmenu")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
@@ -21,22 +21,34 @@ class PyprMenu(ctk.CTk):
         
         self.button_1 = ctk.CTkButton(
             self.main_menu_frame, 
-            text="Shutdown",
+            text=" Shutdown",
             command=self.button_shutdown,
+            fg_color="#1f1f28",
+            hover_color="#2d2d40",
+            text_color="#bdf6ec",
+            font=("JetBrainsMono", 28, "bold"),
         )
         self.button_1.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
 
         self.button_2 = ctk.CTkButton(
             self.main_menu_frame,
-            text="Restart",
+            text=" Restart",
             command=self.button_restart,
+            fg_color="#1f1f28",
+            hover_color="#2d2d40",
+            text_color="#bdf6ec",
+            font=("JetBrainsMono", 28, "bold"),
         )
         self.button_2.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
 
         self.button_3 = ctk.CTkButton(
             self.main_menu_frame,
-            text="Lock",
+            text=" Lock",
             command=self.button_lock,
+            fg_color="#1f1f28",
+            hover_color="#2d2d40",
+            text_color="#bdf6ec",
+            font=("JetBrainsMono", 28, "bold"),
         )
         self.button_3.grid(row=1, column=2, padx=10, pady=10, sticky="nsew")
 
