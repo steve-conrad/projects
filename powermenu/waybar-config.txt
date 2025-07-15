@@ -1,0 +1,14 @@
+ 
+Waybar configuration for a custom power menu button:
+
+ "custom/power": {	  
+    "format": "<span>  </span>",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exec \"[float;center;pin] python3 ~/projects/powermenu/powermenu.py\""
+    },
+
+Hyprland window rules:
+windowrulev2 = float,title:^(PowerMenu)$
+windowrulev2 = center,title:^(PowerMenu)$
+windowrulev2 = size 750 250,title:^(PowerMenu)$
+windowrulev2 = opacity 0.8,title:^(PowerMenu)$
