@@ -3,11 +3,11 @@
 import subprocess
 import customtkinter as ctk
 
-class PyprMenu(ctk.CTk):
+class PowerMenu(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Pyprmenu")
+        self.title("PowerMenu")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(0, weight=1)
 
@@ -53,7 +53,7 @@ class PyprMenu(ctk.CTk):
             font=("JetBrainsMono Nerd Font", 76, "bold"),
             corner_radius=12,
         )
-        self.lock.grid(row=1, column=2, padx=14, pady=14, sticky="nsew")
+        self.lock.grid(row=1, column=2, padx=14, pady=14, sticky="nsew") 
 
 # Define button actions
     def button_shutdown(self):
@@ -65,5 +65,5 @@ class PyprMenu(ctk.CTk):
     def button_lock(self):
         subprocess.run(["hyprlock"])
 
-app = PyprMenu()
+app = PowerMenu()
 app.mainloop()
