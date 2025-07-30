@@ -11,9 +11,11 @@ from modules._powerbutton import powerbutton
 from modules._bluetooth import bluetooth
 from modules._workspaces import workspaces
 from modules._activewindow import activewindow
-from modules._audio import audio
+from modules._volume import VolumeWidget
 from modules._network import network
 from modules._notifications import notifications
+
+audio = VolumeWidget()
 
 class Bar(Window):
     def __init__(self, **kwargs):

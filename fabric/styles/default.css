@@ -92,3 +92,22 @@
     margin-left: 10px;
     margin-right: 20px;
 }
+
+.overlay-progress-bar {
+    color: @teal-dim; 
+}
+
+.overlay-icon {
+    font-size: 14px;
+    color: @white;
+}
+
+.panel-text {
+    font-size: 14px; 
+    margin-right: 10px;
+    color: @white;
+}
+
+.panel-font-icon {
+}
+
