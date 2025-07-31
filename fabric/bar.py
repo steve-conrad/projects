@@ -14,8 +14,10 @@ from modules._activewindow import activewindow
 from modules._volume import VolumeWidget
 from modules._network import network
 from modules._notifications import notifications
+from modules._power import PowerMenu
 
 audio = VolumeWidget()
+powermenu = PowerMenu()
 
 class Bar(Window):
     def __init__(self, **kwargs):
@@ -43,7 +45,7 @@ class Bar(Window):
                 name="start-container",
                 orientation="h",
                 spacing=4,
-                children=[powerbutton, activewindow],
+                children=[powermenu, activewindow],
             ),
             center_children=Box(
                 name="center-container",
