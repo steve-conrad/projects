@@ -11,7 +11,6 @@
 }
 
 #bar {
-    font-family: JetBrainsMono Nerd Font, monospace;
     background-color: @midnight;
     border-top: 1px solid @teal;
     border-bottom: 1px solid @teal;
